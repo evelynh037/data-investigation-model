@@ -4,7 +4,7 @@
 
 
 ## Baseline Model
-We choose to use a tree decision model for our baseline model.
+We choose to use a tree decision model for our baseline model. There are 4 predictor variable 
 
 ## Final Model
 
