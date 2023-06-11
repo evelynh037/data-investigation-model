@@ -10,8 +10,9 @@ We create a tree decision model for our baseline model. Before training the data
 ### How we encode categorical data
 
 <br />
-### Accuracy
+### Accuracy and Comments
 
+<br />
 ## Final Model
 
 ## Fairness Analysis
