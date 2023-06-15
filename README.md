@@ -39,9 +39,9 @@ We create a tree decision model for our final model and are testig/training on 7
 Built upon the baseline mode, the two features we addd are based on "minutes","protein (PDV)", "carbohydrates (PDV)" and "calories (#)".
 After EDA, we found that recipes with label "dietary" are less time-consuming and are more likely to be under 30minutes and minutes has a wide range with extremely large max. Therefore, we perform a Binarizer transformation on "minutes" with threshold 30. By doing this, we divided the recipes in two groups, "with minutes under 30 minutes" and "with minutes above 30 minutes". By doing this, we reduce the dementional of "minutes" and eliminate the extremely large outlier's impact on our model.
 <br />
+grid-search result {'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 200}
+
+accuracy {'train': 0.702019613780894, 'test': 0.7218413320274242} jacquelin你用这个
 
 ## Fairness Analysis
 
-grid-search result {'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 200}
-
-accuracy {'train': 0.702019613780894, 'test': 0.7218413320274242} 用这个
