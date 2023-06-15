@@ -32,16 +32,17 @@ We run the F1 score several times on the trained dataset, and the F1 remains at 
 <br />
 
 ## Final Model
-### About Our Model
-We create a tree decision model for our final model and are testig/training on 75% and 25% as training and testing datasets as the baseline model. The hyperparameter we picked are max_depth = 10, criterion = "gini",min_samples_split = 200.
-<br />
 ### What Features Did We Add
 Built upon the baseline mode, the two features we addd are based on "minutes","protein (PDV)", "carbohydrates (PDV)" and "calories (#)".
 After EDA, we found that recipes with label "dietary" are less time-consuming and are more likely to be under 30minutes and minutes has a wide range with extremely large max. Therefore, we perform a Binarizer transformation on "minutes" with threshold 30. By doing this, we divided the recipes in two groups, "with minutes under 30 minutes" and "with minutes above 30 minutes". By doing this, we reduce the dementional of "minutes" and eliminate the extremely large outlier's impact on our model.
 <br />
+### About Our Model
+We create a tree decision model for our final model and are testig/training on 75% and 25% as training and testing datasets as the baseline model. The hyperparameter we picked are max_depth = 10, criterion = "gini",min_samples_split = 200.
+<br />
+
 grid-search result {'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 200}
 
-accuracy {'train': 0.702019613780894, 'test': 0.7218413320274242} jacquelin你用这个
-
+F1 score {'train': 0.702019613780894, 'test': 0.7218413320274242} 
+##在哪里介绍 why features
 ## Fairness Analysis
 
