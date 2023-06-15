@@ -1,8 +1,19 @@
 # data-investigation-model
 
 ## Framing the Problem
-In today's health-conscious world, there is a growing demand for dietary recipes that cater to specific dietary needs and preferences. Therefore, this model is built helping to predict whether or not one recipe would be tagged with the label "dietary" in food.com given features "ingredients"(ingredients used in the recipe), "minutes"(minutes to prepare recipe), "description"(user-provided description to the recipe), "protein (PDV)", "carbohydrates (PDV)" and "calories (#)". Our response variable would be "if dietary", either "would be tagged as dietary" or "would not be tagged as dietary" which can be extracted from their tags from the existing dataset for modeling. The reason why we picked this variable is because people are now focusing more and more on their health, and our model aimed to better help the website label their dietary recipe for user who are on diets. Morover, this label also have many unique characteric in either menu description, ingredients used and also nutrition facts. The reason why we choose those features is that dietary recipes are tended to have special ingredients(vegetables, fruits, whole grains) and without certain ingredients(chocolate, sugar), are less time-consuming, have a good balance of nutrition components, and have likely to have certain words in the recipe descriptions. Since the prediction only involves yes and no questions, it would be a binary classification problem. The matrices we are using to evaluate our model are F1 since there is class imbalance between the "would be tagged as dietary" or "would not be tagged as dietary" two class, we would taken account of the TP(True positive),TN(True negative),FP(False positive),FN(False negative) of the model. By doing this,it would result in a more fair evaluation of our model and avoid misleads.
-
+<br />
+In today's health-conscious world, there is a growing demand for dietary recipes that cater to specific dietary needs and preferences. Therefore, this model is built helping to predict whether or not one recipe would be tagged with the label "dietary" in food.com given features "ingredients"(ingredients used in the recipe), "minutes"(minutes to prepare recipe), "description"(user-provided description to the recipe), "protein (PDV)", "carbohydrates (PDV)" and "calories (#)".
+<br />
+<br />
+Our response variable would be "if dietary", either "would be tagged as dietary" or "would not be tagged as dietary" which can be extracted from their tags from the existing dataset for modeling. The reason why we picked this variable is because people are now focusing more and more on their health, and our model aimed to better help the website label their dietary recipe for user who are on diets.
+<br />
+<br />
+Morover, this label also have many unique characteric in either menu description, ingredients used and also nutrition facts. The reason why we choose those features is that dietary recipes are tended to have special ingredients(vegetables, fruits, whole grains) and without certain ingredients(chocolate, sugar), are less time-consuming, have a good balance of nutrition components, and have likely to have certain words in the recipe descriptions. 
+<br />
+<br />
+Since the prediction only involves yes and no questions, it would be a binary classification problem. The matrices we are using to evaluate our model are F1 since there is class imbalance between the "would be tagged as dietary" or "would not be tagged as dietary" two class, we would taken account of the TP(True positive),TN(True negative),FP(False positive),FN(False negative) of the model. By doing this,it would result in a more fair evaluation of our model and avoid misleads.
+<br />
+<br />
 
 ## Baseline Model
 ### Basic features of Model
