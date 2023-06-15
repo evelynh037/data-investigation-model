@@ -1,5 +1,5 @@
 # Recipe labeling specifically for label "Dietary" 
-# if the recipe would be labled as "dietary" or not?
+# Predict if the recipe would be labled as "dietary" or not.
 
 
 ## Framing the Problem
