@@ -1,4 +1,6 @@
-# data-investigation-model
+# Recipe labeling model specifically for "Dietary" label
+# if the recipe would be labled as "dietary" or not?
+
 
 ## Framing the Problem
 ### our prediction problem
