@@ -34,16 +34,18 @@ We run the F1 score several times on the trained dataset, and the F1 remains at 
 ## Final Model
 ### What Features Did We Add
 Built upon the baseline mode, the two features we addd are based on "minutes","protein (PDV)", "carbohydrates (PDV)" and "calories (#)".
-After EDA, we found that recipes with label "dietary" are less time-consuming and are more likely to be under 30minutes and minutes has a wide range with extremely large max. Therefore, we perform a Binarizer transformation on "minutes" with threshold 30. By doing this, we divided the recipes in two groups, "with minutes under 30 minutes" and "with minutes above 30 minutes". By doing this, we reduce the dementional of "minutes" and eliminate the extremely large outlier's impact on our model. Then, we also perform QuantileTransformer on the columns "protein (PDV)", "carbohydrates (PDV)" and "calories (#)". Since they are all columns related to the nurtrients and have different scalers, so it is not reasonable to leave them as the raw data. Through QuantileTransformer, we can handle the skewed data while still perserving the relative relationship 
+After EDA, we found that recipes with label "dietary" are less time-consuming and are more likely to be under 30minutes and minutes has a wide range with extremely large max. Therefore, we perform a Binarizer transformation on "minutes" with threshold 30. By doing this, we divided the recipes in two groups, "with minutes under 30 minutes" and "with minutes above 30 minutes". By doing this, we reduce the dementional of "minutes" and eliminate the extremely large outlier's impact on our model. Then, we also perform QuantileTransformer on the columns "protein (PDV)", "carbohydrates (PDV)" and "calories (#)". Since they are all columns related to the nurtrients and have different scalers, so it is not reasonable to leave them as the raw data. Through QuantileTransformer, we can handle the skewed data, as well as taking care of the effect of outliers, while still perserving the relative relationship. 
 <br />
 
-### About Our Model
-We create a tree decision model for our final model and are testig/training on 75% and 25% as training and testing datasets as the baseline model. 
+### Model Basics and Grid Search
+To compare with the baseline model, we use the same train and test dataset used in baseline model. We still use decision tree because it is still a good choice in classification prediction. To decide the hyperparameters, we perform a GridSearch before training the data. We choose 10 different max_depths, 2 kinds of criterion, and 7 min_samples_split numbers. After training the 140 kinds of combinatio, it comes to the best combination: {'criterion': 'gini', 'max_depth': 7, 'min_samples_split': 50}, and we unpack this combination into our final model.
 <br />
 
-grid-search result {'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 200}
+![Screenshot](107851686871529_.pic.jpg)
+
+
 
 F1 score {'train': 0.702019613780894, 'test': 0.7218413320274242} 
-##在哪里介绍 why features
+
 ## Fairness Analysis
 
