@@ -12,7 +12,7 @@ Our response variable would be "if dietary", either "would be tagged as dietary"
 Moreover, dietary labeled recipes can also have many unique characteristics in menu descriptions, ingredients used, and also nutrition facts. The reason why we choose those features is that dietary recipes are tended to have special ingredients and without certain ingredients, are less time-consuming, have a good balance of nutrition components, and have likely to have certain words in the recipe descriptions. 
 <br />
 ### Why F1 as metrics?
-Since the prediction only involves yes and no questions, it would be a binary classification problem. The matrices we are using to evaluate our model are F1 since there is a class imbalance between the "would be tagged as dietary" or "would not be tagged as dietary" two classes, we would take account of the TP(True positive), TN(True negative), FP(False positive),FN(False negative) of the model. By doing this, it would result in a more fair evaluation of our model and avoid misleads.
+Since the prediction only involves yes and no questions, it would be a binary classification problem. We did not choose accuracy because there is a class imbalance between the "would be tagged as dietary" or "would not be tagged as dietary" two classe. The matrices we are using to evaluate our model are F1 since we would take account of the TP(True positive), TN(True negative), FP(False positive),FN(False negative) of the model. When we predict whether it is dietary, we don't give a preference to minimize the FP or FN. Instead, we want to achieve a balance in precision and recall. Thus, F1 distinguishes out of precision or recall.
 <br />
 ## Baseline Model
 ### About Our Model
