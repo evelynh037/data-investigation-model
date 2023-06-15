@@ -12,7 +12,6 @@ Morover, dietary labeled recipe can also have many unique characteric in either 
 ### why F1 as metrices?
 Since the prediction only involves yes and no questions, it would be a binary classification problem. The matrices we are using to evaluate our model are F1 since there is class imbalance between the "would be tagged as dietary" or "would not be tagged as dietary" two class, we would taken account of the TP(True positive),TN(True negative),FP(False positive),FN(False negative) of the model. By doing this,it would result in a more fair evaluation of our model and avoid misleads.
 <br />
-
 ## Baseline Model
 ### about our Model
 <br />
