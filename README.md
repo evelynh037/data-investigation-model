@@ -36,8 +36,9 @@ We run the F1 score several times on the trained dataset, and the F1 remains at 
 Built upon the baseline mode, the two features we addd are based on "minutes","protein (PDV)", "carbohydrates (PDV)" and "calories (#)".
 After EDA, we found that recipes with label "dietary" are less time-consuming and are more likely to be under 30minutes and minutes has a wide range with extremely large max. Therefore, we perform a Binarizer transformation on "minutes" with threshold 30. By doing this, we divided the recipes in two groups, "with minutes under 30 minutes" and "with minutes above 30 minutes". By doing this, we reduce the dementional of "minutes" and eliminate the extremely large outlier's impact on our model.
 <br />
+
 ### About Our Model
-We create a tree decision model for our final model and are testig/training on 75% and 25% as training and testing datasets as the baseline model. The hyperparameter we picked are max_depth = 10, criterion = "gini",min_samples_split = 200.
+We create a tree decision model for our final model and are testig/training on 75% and 25% as training and testing datasets as the baseline model. 
 <br />
 
 grid-search result {'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 200}
