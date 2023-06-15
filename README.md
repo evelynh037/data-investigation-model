@@ -28,9 +28,13 @@ For "description", we found that words like "healthy", "low-calorie","gluten-fre
 For "ingredients", we found that dietary recipes are not likely to have "chocolate" or "bacon" in as ingredients. Therefore, we then wrote our own FunctionTransformer transform the "ingredients" feature into the total occurance of these two words appear in the recipes. We use a pipeline to transform and also one-hot encode it.
 <br />
 ### accuracy and comments
-We run the F1 score several times on the trained dataset, and the F1 remains about 0.6991755302410473. Also, the tested data shows a constant accuracy rate of about 0.7081. However, when we calulate the proportion of recipes that have dietary as lable, the porportion is 69%. That is, if the model predict all the outcome is 5, it can have an accuracy score of 0.69. Our model have similar F1 score for testing set and 0.1 higher than the model which always predict as "would be labled as "dietary" for the testing set which is not very optimal.
+We run the F1 score several times on the trained dataset, and the F1 remains about 0.7013. Also, the tested data shows a constant accuracy rate of about 0.7092. However, when we calulate the proportion of recipes that have dietary as lable, the porportion is 69%. That is, if the model predict all the outcome is 5, it can have an accuracy score of 0.69. Our model have similar F1 score for testing set and 0.1 higher than the model which always predict as "would be labled as "dietary" for the testing set which is not very optimal.
 <br />
 
 ## Final Model
 
 ## Fairness Analysis
+
+gridsearch result {'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 200}
+
+accuracy {'train': 0.702019613780894, 'test': 0.7218413320274242} 用这个
