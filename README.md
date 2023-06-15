@@ -40,6 +40,7 @@ After EDA, we found that recipes with label "dietary" are less time-consuming an
 ### About Our Model
 We create a tree decision model for our final model and are testig/training on 75% and 25% as training and testing datasets as the baseline model. 
 <br />
+![Screenshot](107851686871529_.pic.jpg)
 
 grid-search result {'criterion': 'gini', 'max_depth': 10, 'min_samples_split': 200}
 
