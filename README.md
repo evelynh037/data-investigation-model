@@ -16,7 +16,7 @@ Since the prediction only involves yes and no questions, it would be a binary cl
 <br />
 ## Baseline Model
 ### about our model
-We create a tree decision model for our baseline model. Before training the data, we split our dataset into 75% and 25% as training and testing dataset. The hyperparameter are max_depth = 4,criterion = "entropy",min_samples_split = 500
+We create a tree decision model for our baseline model. Before training the data, we split our dataset into 75% and 25% as training and testing dataset. The hyperparameter we picked are max_depth = 6,criterion = "gini",min_samples_split = 100 since there are 6 features and "gini" work well with imbalance data.
 <br />
 The features we taken into our model are "ingredients","minutes","description","protein (PDV)","carbohydrates (PDV)","calories (#)" which would all be avaiable if at time of prediction. Among those features, we have 2 categorical and 4 numerical, ingredients(list with ingredients as elm), "description"(a string describing the recipe) are nominal features, and the rest("minutes","protein(PDV","carbohydrates (PDV)","calories (#)" are quantitative features.
 <br />
