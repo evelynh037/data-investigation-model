@@ -40,12 +40,15 @@ After EDA, we found that recipes with label "dietary" are less time-consuming an
 ### Model Basics and Grid Search
 To compare with the baseline model, we use the same train and test dataset used in baseline model. We still use decision tree because it is still a good choice in classification prediction. To decide the hyperparameters, we perform a GridSearch before training the data. We choose 10 different max_depths, 2 kinds of criterion, and 7 min_samples_split numbers. After training the 140 kinds of combinatio, it comes to the best combination: {'criterion': 'gini', 'max_depth': 7, 'min_samples_split': 50}, and we unpack this combination into our final model.
 <br />
-
+### F1 score and Comments
+The F1 score in final model for training dataset is 0.72546 and for test dataset is 0.72158. For both of training and testing dataset, the F1 score increases by 1%. An increase by 1% represents the increase in both precision and recall. Also, we attached a confusion matrix below about the distribution of TP, TN, FN, and FP.
+<br />
 ![Screenshot](107851686871529_.pic.jpg)
 
+According to the diagram, the section with the largest number is TP with about 50% dataset there. For the FN and FP part, FP is about 5 times higher than the FN number. This is likely to raise from the bias in dataset itself since the proportion of recipes with "dietary" in tag is higher than recipes without. So as the false number, FP is much higher than FN.
 
 
-F1 score {'train': 0.702019613780894, 'test': 0.7218413320274242} 
+{'train': 0.7254682602097894, 'test': 0.7215842902313198}
 
 ## Fairness Analysis
 
