@@ -49,13 +49,16 @@ According to the diagram, the section with the largest number is TP with about 5
 
 ## Fairness Analysis
 ### Hypothesis
-In this section, we want to evaluate whether this model is fair. The one variable that relates to whether "dietary" or not is calories number. We want to explore whether this model can gives the same F1 score for calories in different levels. For this question, we will categorize calories to "high_cal", which is higher than and equal to the median calories number in the dataset, and "low_cal" which is lower than the median. We use median as threshold is to have the similiar number of data for those two categories. 
+In this section, we want to evaluate whether this model is fair. The one variable that relates to whether "dietary" or not is calories number. We want to explore whether this model can gives the same F1 score for calories in different levels. For this question, we will categorize calories to "high_cal", which is higher than and equal to the median calories number in the dataset, and "low_cal" which is lower than the median. We use median as threshold is to have the similiar number of data for those two categories. Then, we explore the data and find that the F1 score of high calories is 4.97% lower than that of low calorie ones. Thus, this leads to:
 <br />
 Null Hypothesis: Our model is fair. Its F1 score for predicting dietary recipe with high calories and low calories are roughly the same, and any differences are due to random chance. 
-Alternative Hypothesis: Our model is unfair. Its precision for young people is lower than its precision for old people.
+Alternative Hypothesis: Our model is unfair. Its F1 score for high calorie recipes is lower than its for the ones with low calories.
+Our test statistic is the unsigned difference in low calories and high calories, and signifiance level is p value of 0.05.
 <br />
 ### Conclusion
+According to the distribution diagram, the differences normally distribute from -0.04 (-4%) to 0.04(4%), and our observed difference is beyond that range (indicated by the red line).
 <iframe src="test.html" width=800 height=600 frameBorder=0></iframe>
 <br />
+The p_value is 0.0 which is smaller than 0.05 and stastically significant. It rejects the null hypothesis that our model is fair. So it is likely that our model is unfair and tends to predict whether the recipe is dietary when the calorie number is low.
 
 
