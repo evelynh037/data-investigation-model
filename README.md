@@ -45,13 +45,17 @@ The F1 score in final model for training dataset is 0.72546 and for test dataset
 <br />
 ![Screenshot](107851686871529_.pic.jpg)
 
-According to the diagram, the section with the largest number is TP with about 50% dataset there. For the FN and FP part, FP is about 5 times higher than the FN number. This is likely to raise from the bias in dataset itself since the proportion of recipes with "dietary" in tag is higher than recipes without. So as the false number, FP is much higher than FN.
+According to the diagram, the section with the largest number is TP with about 50% dataset there. For the FN and FP part, FP is about 5 times higher than the FN number. This is likely to raise from the bias in dataset itself since the proportion of recipes with "dietary" in tag is higher than recipes without. So as the false prediction, FP is much higher than FN.
 
 ## Fairness Analysis
 ### Hypothesis
-
+In this section, we want to evaluate whether this model is fair. The one variable that relates to whether "dietary" or not is calories number. We want to explore whether this model can gives the same F1 score for calories in different levels. For this question, we will categorize calories to "high_cal", which is higher than and equal to the median calories number in the dataset, and "low_cal" which is lower than the median. We use median as threshold is to have the similiar number of data for those two categories. 
+<br />
+Null Hypothesis: Our model is fair. Its F1 score for predicting dietary recipe with high calories and low calories are roughly the same, and any differences are due to random chance. 
+Alternative Hypothesis: Our model is unfair. Its precision for young people is lower than its precision for old people.
 <br />
 ### Conclusion
+<iframe src="test.html" width=800 height=600 frameBorder=0></iframe>
 <br />
 
 
