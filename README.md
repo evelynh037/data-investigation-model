@@ -47,8 +47,11 @@ The F1 score in final model for training dataset is 0.72546 and for test dataset
 
 According to the diagram, the section with the largest number is TP with about 50% dataset there. For the FN and FP part, FP is about 5 times higher than the FN number. This is likely to raise from the bias in dataset itself since the proportion of recipes with "dietary" in tag is higher than recipes without. So as the false number, FP is much higher than FN.
 
-
-{'train': 0.7254682602097894, 'test': 0.7215842902313198}
-
 ## Fairness Analysis
+### Hypothesis
+
+<br />
+### Conclusion
+<br />
+
 
