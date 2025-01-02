@@ -1,4 +1,5 @@
-# Recipe labeling specifically for label "Dietary" - If the recipe would be labled as "dietary" ?
+# Recipe labeling specifically for label "Dietary" 
+## - If the recipe would be labled as "dietary" ?
 
 
 ## Framing the Problem
